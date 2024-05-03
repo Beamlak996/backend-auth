@@ -1,5 +1,6 @@
+import { Request, Response } from "express";
+
 import { createUser, getUserByEmail } from "../actions/user.action";
-import express, { Request, Response } from "express";
 import { authentication, random } from "../helpers";
 
 export const login = async (req: Request, res: Response) => {
