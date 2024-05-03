@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-import { UserModel } from "models/user.model";
+import { UserModel } from "../models/user.model";
 
 // get all users
 export const getUsers = () => UserModel.find();

@@ -7,6 +7,8 @@ import compression from "compression";
 import cors from "cors";
 import mongoose from "mongoose";
 
+import router from "./routes"
+
 const app = express()
 
 app.use(
@@ -18,6 +20,9 @@ app.use(
 app.use(compression());
 app.use(cookieParser());
 app.use(bodyParser.json());
+
+
+app.use("/", router())
 
 
 const server = http.createServer(app);
